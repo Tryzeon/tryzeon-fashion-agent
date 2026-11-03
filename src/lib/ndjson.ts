@@ -1,6 +1,12 @@
-export async function postStream<Event>(url: string, body: unknown, onEvent: (event: Event) => void): Promise<void> {
+export async function postStream<Event>(
+  url: string,
+  body: unknown,
+  onEvent: (event: Event) => void,
+  signal?: AbortSignal,
+): Promise<void> {
   const response = await fetch(url, {
     method: 'POST',
+    signal,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });

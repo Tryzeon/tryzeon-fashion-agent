@@ -151,7 +151,7 @@ export function App() {
   const [shopper, setShopper] = useState<Shopper>(SAMPLE_SHOPPERS[0]!);
   const [view, setView] = useState<'chat' | 'fitting'>('chat');
   const { turns, running, send, reset } = useAgent(shopper.profile);
-  const { tryon, start } = useTryon();
+  const { tryon, start, reset: resetTryon } = useTryon();
   const scroller = useRef<HTMLDivElement>(null);
   const autoSwapped = useRef<Outfit | null>(null);
 
@@ -175,8 +175,20 @@ export function App() {
 
   const pickShopper = (next: Shopper) => {
     if (next.profile.gender !== shopper.profile.gender) reset();
+    if (next.id !== shopper.id || next.photo !== shopper.photo) resetTryon();
     setShopper(next);
   };
+
+  useEffect(() => {
+    if (!embedded) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') window.parent.postMessage({ type: 'tryzeon:close' }, '*');
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  const triedOutfit = tryon.status !== 'error' && tryon.personKey === shopper.id ? tryon.outfit : null;
 
   const startWith = async (starter: Starter) => {
     const image = starter.image ? await toDataUrl(starter.image, 768) : null;
@@ -226,7 +238,7 @@ export function App() {
               <Conversation
                 turns={turns}
                 profile={shopper.profile}
-                triedOutfit={tryon.outfit}
+                triedOutfit={triedOutfit}
                 tryonRunning={tryon.status === 'running'}
                 onTry={(o) => void tryOn(o)}
               />

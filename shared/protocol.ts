@@ -58,7 +58,7 @@ export type TryonEvent =
   | { type: 'stage'; stage: 'render' | 'verify'; attempt: number; mode: 'full' | 'swap' | 'fix'; detail: string }
   | { type: 'image'; attempt: number; image: string }
   | { type: 'verification'; attempt: number; verification: Verification }
-  | { type: 'final'; image: string; responseId: string; verified: boolean; attempts: number }
+  | { type: 'final'; attempt: number; responseId: string; verified: boolean; attempts: number }
   | { type: 'error'; message: string };
 
 export interface SegmentRequest {

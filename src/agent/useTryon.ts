@@ -25,6 +25,7 @@ export interface TryonResult {
 export interface TryonState {
   status: 'idle' | 'running' | 'done' | 'error';
   outfit: Outfit | null;
+  personKey: string | null;
   rows: PipelineRow[];
   preview: string | null;
   result: TryonResult | null;
@@ -32,24 +33,44 @@ export interface TryonState {
   error: string | null;
 }
 
-const IDLE: TryonState = { status: 'idle', outfit: null, rows: [], preview: null, result: null, regions: null, error: null };
+const IDLE: TryonState = {
+  status: 'idle',
+  outfit: null,
+  personKey: null,
+  rows: [],
+  preview: null,
+  result: null,
+  regions: null,
+  error: null,
+};
 
 export function useTryon() {
   const [state, setState] = useState<TryonState>(IDLE);
   const run = useRef(0);
+  const inflight = useRef<AbortController | null>(null);
+
+  const reset = useCallback(() => {
+    run.current += 1;
+    inflight.current?.abort();
+    setState(IDLE);
+  }, []);
 
   const start = useCallback(
     async (outfit: Outfit, personImage: string, personKey: string) => {
+      inflight.current?.abort();
+      const controller = new AbortController();
+      inflight.current = controller;
       const id = ++run.current;
       const productIds = outfit.items.map((i) => i.productId);
       const previous = state.result && state.result.personKey === personKey ? state.result : null;
+      const images = new Map<number, string>();
       const set = (change: (s: TryonState) => TryonState) => {
         if (run.current === id) setState(change);
       };
       const closeActive = (rows: PipelineRow[], status: PipelineRow['status'] = 'done') =>
         rows.map((r) => (r.status === 'active' ? { ...r, status, endedAt: Date.now() } : r));
 
-      set((s) => ({ ...IDLE, status: 'running', outfit, preview: s.result?.image ?? null, result: s.result }));
+      set(() => ({ ...IDLE, status: 'running', outfit, personKey, preview: previous?.image ?? null, result: previous }));
       let final: TryonResult | null = null;
       try {
         await postStream<TryonEvent>(
@@ -81,6 +102,7 @@ export function useTryon() {
                 }));
                 break;
               case 'image':
+                images.set(event.attempt, event.image);
                 set((s) => ({ ...s, preview: event.image }));
                 break;
               case 'verification':
@@ -98,14 +120,19 @@ export function useTryon() {
                   ),
                 }));
                 break;
-              case 'final':
-                final = { image: event.image, responseId: event.responseId, verified: event.verified, productIds, personKey };
-                set((s) => ({ ...s, rows: closeActive(s.rows), preview: event.image, result: final }));
+              case 'final': {
+                const image = images.get(event.attempt);
+                if (!image) throw new Error('The final render was not received');
+                const result: TryonResult = { image, responseId: event.responseId, verified: event.verified, productIds, personKey };
+                final = result;
+                set((s) => ({ ...s, rows: closeActive(s.rows), preview: result.image, result }));
                 break;
+              }
               case 'error':
                 throw new Error(event.message);
             }
           },
+          controller.signal,
         );
         if (!final) throw new Error('The try-on ended without an image');
         const result: TryonResult = final;
@@ -130,7 +157,9 @@ export function useTryon() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ image: result.image, productIds }),
+          signal: controller.signal,
         });
+        if (!response.ok) throw new Error(`making the photo shoppable failed (${response.status})`);
         const { regions } = (await response.json()) as SegmentResponse;
         const found = new Set(regions.map((r) => r.productId)).size;
         set((s) => ({
@@ -138,13 +167,16 @@ export function useTryon() {
           status: 'done',
           regions,
           rows: s.rows.map((r) =>
-            r.key === 'shoppable' ? { ...r, status: 'done', detail: `${found} of ${productIds.length} pieces tappable`, endedAt: Date.now() } : r,
+            r.key === 'shoppable'
+              ? { ...r, status: 'done', detail: `${found} of ${productIds.length} pieces tappable`, endedAt: Date.now() }
+              : r,
           ),
         }));
       } catch (error) {
+        if (controller.signal.aborted) return;
         set((s) => ({
           ...s,
-          status: s.result && final ? 'done' : 'error',
+          status: final ? 'done' : 'error',
           error: error instanceof Error ? error.message : String(error),
           rows: closeActive(s.rows, 'failed'),
         }));
@@ -153,5 +185,5 @@ export function useTryon() {
     [state.result],
   );
 
-  return { tryon: state, start };
+  return { tryon: state, start, reset };
 }

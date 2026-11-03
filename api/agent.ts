@@ -134,7 +134,7 @@ const STOPWORDS = new Set(['a', 'an', 'the', 'and', 'or', 'for', 'with', 'in', '
 function tokens(text: string): string[] {
   return text
     .toLowerCase()
-    .split(/[^a-z0-9]+/)
+    .split(/[^\p{L}\p{N}]+/u)
     .filter((t) => t.length > 1 && !STOPWORDS.has(t));
 }
 
@@ -150,7 +150,7 @@ interface SearchArgs {
 }
 
 function searchCatalog(args: SearchArgs, profile: BodyProfile): Product[] {
-  const queryTokens = tokens(args.query);
+  const queryTokens = tokens(args.query ?? '');
   return catalog.products
     .filter((p) => p.category === args.category)
     .filter((p) => p.gender === 'unisex' || p.gender === profile.gender)
@@ -161,7 +161,7 @@ function searchCatalog(args: SearchArgs, profile: BodyProfile): Product[] {
       const score = queryTokens.reduce((sum, t) => sum + (haystack.has(t) ? 1 : 0), 0);
       return { p, score };
     })
-    .sort((a, b) => b.score - a.score || b.p.warmth - a.p.warmth)
+    .sort((a, b) => b.score - a.score)
     .slice(0, SEARCH_LIMIT)
     .map(({ p }) => p);
 }
@@ -206,6 +206,9 @@ function proposeOutfit(
   args: { title: string; rationale: string; items: { product_id: string; reason: string }[] },
   profile: BodyProfile,
 ): { outfit: Outfit | null; problems: string[] } {
+  if (!Array.isArray(args.items) || args.items.length === 0) {
+    return { outfit: null, problems: ['items must be a non-empty array of {product_id, reason}'] };
+  }
   const problems: string[] = [];
   const items: OutfitItem[] = [];
   const perCategory = new Map<Category, number>();
@@ -304,13 +307,13 @@ export async function POST(request: Request): Promise<Response> {
       const message = completion.choices[0]?.message;
       if (!message) throw new Error('Muse Spark returned no message');
       const calls = message.tool_calls ?? [];
-      const text = message.content?.replace(/([.!?])(?=[A-Z])/g, '$1 ').trim();
+      const text = message.content?.trim();
       if (!calls.length) {
         if (text) send({ type: 'message', text });
         send({ type: 'done' });
         return;
       }
-      if (text) send({ type: 'narration', text });
+      if (text) send({ type: 'narration', text: text.replace(/([.!?])(?=[A-Z][a-z])/g, '$1 ') });
       messages.push({ role: 'assistant', content: message.content ?? '', tool_calls: calls });
       for (const call of calls) {
         let args: Record<string, unknown> = {};

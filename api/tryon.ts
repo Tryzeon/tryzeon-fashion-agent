@@ -12,9 +12,19 @@ const MAX_SWAP_CHANGES = 2;
 type ImageInput = OpenAI.Responses.ResponseCreateParams['input'];
 
 interface Attempt {
+  number: number;
   responseId: string;
-  image: string;
   verification: Verification;
+}
+
+function uncheckedVerification(products: Product[], error: unknown): Verification {
+  console.error('verification failed', error);
+  return {
+    passed: false,
+    identityPreserved: true,
+    items: products.map((p) => ({ productId: p.id, score: 0, issue: 'check unavailable' })),
+    summary: 'The quality check could not run on this render.',
+  };
 }
 
 function dataUrlFromBase64(base64: string): string {
@@ -240,7 +250,7 @@ export async function POST(request: Request): Promise<Response> {
     const attempts: Attempt[] = [];
     const plan = body.previous ? planSwap(body.previous.productIds, body.productIds) : null;
 
-    for (let n = 1; n <= MAX_ATTEMPTS; n += 1) {
+    for (let n = 1; n <= MAX_ATTEMPTS && !request.signal.aborted; n += 1) {
       const last = attempts.at(-1);
       let input: ImageInput;
       let previousResponseId: string | undefined;
@@ -272,16 +282,24 @@ export async function POST(request: Request): Promise<Response> {
       send({ type: 'image', attempt: n, image });
 
       send({ type: 'stage', stage: 'verify', attempt: n, mode, detail: `${products.length} pieces + identity` });
-      const verification = await verify(body.personImage, image, products);
+      let verification: Verification;
+      let checked = true;
+      try {
+        verification = await verify(body.personImage, image, products);
+      } catch (error) {
+        verification = uncheckedVerification(products, error);
+        checked = false;
+      }
       send({ type: 'verification', attempt: n, verification });
-      attempts.push({ responseId: rendered.responseId, image, verification });
-      if (verification.passed) break;
+      attempts.push({ number: n, responseId: rendered.responseId, verification });
+      if (verification.passed || !checked || request.signal.aborted) break;
     }
 
+    if (!attempts.length) return;
     const best = attempts.reduce((a, b) => (quality(b) > quality(a) ? b : a));
     send({
       type: 'final',
-      image: best.image,
+      attempt: best.number,
       responseId: best.responseId,
       verified: best.verification.passed,
       attempts: attempts.length,
