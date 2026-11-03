@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/agent.ts": { "maxDuration": 120 },
+    "api/tryon.ts": { "maxDuration": 300, "includeFiles": "public/catalog/**" },
+    "api/segment.ts": { "maxDuration": 120 }
+  }
+}
