@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import catalogJson from '../../shared/catalog.json';
+import catalogJson from '../../shared/catalog.json' with { type: 'json' };
 import type { Catalog, Product } from '../../shared/types.js';
 
 export const catalog = catalogJson as Catalog;
