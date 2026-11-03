@@ -170,6 +170,7 @@ export function App() {
   });
 
   useEffect(() => {
+    if (turns.length === 0) return;
     scroller.current?.scrollTo({ top: scroller.current.scrollHeight, behavior: 'smooth' });
   }, [turns]);
 
