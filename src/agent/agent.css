@@ -359,7 +359,7 @@ button:disabled { cursor: default; opacity: 0.5; }
 .hotspot { cursor: pointer; outline: none; }
 .hotspot path { fill: rgba(255, 255, 255, 0); stroke: rgba(255, 255, 255, 0); stroke-width: 2; transition: fill 0.15s, stroke 0.15s; }
 .hotspots:hover .hotspot path { stroke: rgba(255, 255, 255, 0.35); }
-.hotspot-lit path { fill: rgba(47, 75, 255, 0.28); stroke: #fff; }
+.hotspot-lit path { fill: rgba(255, 255, 255, 0.16); stroke: #fff; stroke-width: 3; }
 
 .popover {
   position: absolute;
