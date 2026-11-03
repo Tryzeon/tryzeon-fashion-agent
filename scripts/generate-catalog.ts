@@ -5,6 +5,8 @@ import { CATEGORIES, SIZES, type Brand, type Catalog, type Category, type Produc
 
 const CATALOG_PATH = 'shared/catalog.json';
 const IMAGE_DIR = 'public/catalog';
+const THUMB_DIR = 'public/catalog/small';
+const THUMB_SIZE = 512;
 const DEMO_DIR = 'public/demo';
 const IMAGE_SIZE = 1024;
 const CONCURRENCY = 6;
@@ -99,7 +101,7 @@ async function generateSpecs(): Promise<void> {
       const content = completion.choices[0]?.message.content;
       if (!content) throw new Error(`No specs for ${brand.id}`);
       const { products } = JSON.parse(content) as { products: Omit<Product, 'id' | 'brandId'>[] };
-      return products.map((p, i) => ({ id: `${brand.id}-${String(i + 1).padStart(2, '0')}`, brandId: brand.id, ...p }));
+      return products.map((p, i) => ({ id: `${brand.id}-${String(i + 1).padStart(2, '0')}`, brandId: brand.id, ...p, look: '' }));
     }),
   );
   const catalog: Catalog = {
@@ -191,8 +193,56 @@ async function generateDemo(): Promise<void> {
   );
 }
 
+const lookSchema = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['colors', 'look'],
+  properties: {
+    colors: {
+      type: 'array',
+      items: { type: 'string' },
+      description: 'Colors actually visible on the item, most dominant first. Only include a color covering a meaningful area, not trims or zips.',
+    },
+    look: {
+      type: 'string',
+      description: 'One sentence a stylist would use to match this item to an outfit photo: dominant color, silhouette, length, texture, standout details.',
+    },
+  },
+} as const;
+
+async function enrich(): Promise<void> {
+  const catalog = JSON.parse(readFileSync(CATALOG_PATH, 'utf8')) as Catalog;
+  mkdirSync(THUMB_DIR, { recursive: true });
+  const enriched = new Map<string, { colors: string[]; look: string }>();
+  await pool(catalog.products, async (product) => {
+    const image = `${IMAGE_DIR}/${product.id}.webp`;
+    await sharp(image).resize(THUMB_SIZE, THUMB_SIZE).webp({ quality: 82 }).toFile(`${THUMB_DIR}/${product.id}.webp`);
+    const completion = await meta().chat.completions.create({
+      model: SPARK_MODEL,
+      response_format: { type: 'json_schema', json_schema: { name: 'look', strict: true, schema: lookSchema } },
+      messages: [
+        {
+          role: 'user',
+          content: [
+            { type: 'text', text: `Catalog photo of "${product.name}" (${product.garment}). Describe what is actually visible.` },
+            { type: 'image_url', image_url: { url: `data:image/webp;base64,${readFileSync(`${THUMB_DIR}/${product.id}.webp`).toString('base64')}` } },
+          ],
+        },
+      ],
+    });
+    const content = completion.choices[0]?.message.content;
+    if (!content) throw new Error(`no look for ${product.id}`);
+    const look = JSON.parse(content) as { colors: string[]; look: string };
+    enriched.set(product.id, look);
+    console.log(`${product.id}: ${look.colors.join(', ')} — ${look.look}`);
+  });
+  catalog.products = catalog.products.map((p) => ({ ...p, ...enriched.get(p.id) }));
+  writeFileSync(CATALOG_PATH, `${JSON.stringify(catalog, null, 2)}\n`);
+}
+
 const step = process.argv[2];
 if (step === 'specs') await generateSpecs();
 else if (step === 'images') await generateImages();
 else if (step === 'demo') await generateDemo();
-else throw new Error('usage: generate-catalog.ts specs|images|demo');
+else if (step === 'enrich') await enrich();
+else throw new Error('usage: generate-catalog.ts specs|images|enrich|demo');

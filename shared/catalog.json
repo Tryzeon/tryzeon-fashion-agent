@@ -22,8 +22,8 @@
       "brandId": "hanul",
       "category": "top",
       "colors": [
-        "oatmeal beige",
-        "rust orange"
+        "beige",
+        "burnt orange"
       ],
       "description": "Slouchy dropped-shoulder sweater in soft oatmeal rib with a rust-orange chest stripe. Layer it over thermals and wide cargos for that effortless Hongdae weekend look.",
       "fit": "oversized",
@@ -49,15 +49,16 @@
         "cozy",
         "layered"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Oversized slouchy hip-length oatmeal-beige chunky rib-knit crewneck sweater with dropped shoulders, ribbed cuffs and hem, and a single burnt-orange horizontal stripe across the chest."
     },
     {
       "id": "hanul-02",
       "brandId": "hanul",
       "category": "top",
       "colors": [
-        "stone grey",
-        "moss green"
+        "gray",
+        "olive green"
       ],
       "description": "Stone-grey waffle thermal with moss-green contrast stitching and a relaxed long fit. Wear it solo or under puffers and vests for easy autumn layering.",
       "fit": "relaxed",
@@ -81,15 +82,15 @@
         "layering",
         "minimal"
       ],
-      "warmth": 2
+      "warmth": 2,
+      "look": "Light heather-gray relaxed hip-length long-sleeve thermal with waffle-knit texture, crew neckline, contrast olive flatlock seaming and solid olive ribbed cuffs."
     },
     {
       "id": "hanul-03",
       "brandId": "hanul",
       "category": "top",
       "colors": [
-        "faded khaki",
-        "clay pink"
+        "washed olive"
       ],
       "description": "Cropped washed tee in faded khaki with a small clay-pink chest graphic. Style it with high-rise cargos and chunky sneakers for a light transitional fit.",
       "fit": "slim",
@@ -112,15 +113,15 @@
         "retro",
         "street"
       ],
-      "warmth": 1
+      "warmth": 1,
+      "look": "Washed olive cropped baby tee with fitted short-sleeve silhouette, cropped length with raw frayed hem, faded vintage-wash texture and small pink sun graphic on the left chest."
     },
     {
       "id": "hanul-04",
       "brandId": "hanul",
       "category": "top",
       "colors": [
-        "charcoal brown",
-        "mustard yellow"
+        "dark brown"
       ],
       "description": "Heavy brushed hoodie in charcoal brown with mustard-yellow drawcords and kangaroo pocket. Its extra-roomy hood and dropped shoulders make it perfect for layering over thermals.",
       "fit": "oversized",
@@ -143,15 +144,15 @@
         "streetwear",
         "cozy"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Dark brown oversized brushed fleece hoodie with a relaxed hip-length silhouette, soft textured finish, kangaroo pocket, ribbed cuffs and hem, and contrasting mustard-yellow drawstrings with a small sleeve logo."
     },
     {
       "id": "hanul-05",
       "brandId": "hanul",
       "category": "top",
       "colors": [
-        "dark olive",
-        "cream"
+        "olive green"
       ],
       "description": "Relaxed mock-neck pullover in dark olive knit with a cream collar trim. Tuck it into barrel pants or cargos for a warm minimalist layered outfit.",
       "fit": "relaxed",
@@ -177,15 +178,16 @@
         "layered",
         "knitwear"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Dark olive green relaxed-fit pullover in a soft heathered knit, hip-length with ribbed cuffs and hem, featuring a wrapped layered mock-neck with cream contrast inner trim and raglan shoulders."
     },
     {
       "id": "hanul-06",
       "brandId": "hanul",
       "category": "bottom",
       "colors": [
-        "sand beige",
-        "olive drab"
+        "beige",
+        "olive green"
       ],
       "description": "Wide-leg cargo pants in sand-beige ripstop with olive bellow pockets and bungee hems. Pair them with cropped puffers and chunky sneakers for a full street uniform.",
       "fit": "relaxed",
@@ -209,15 +211,15 @@
         "utility",
         "baggy"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Beige wide-leg low-rise full-length cargo pants in lightweight crinkled fabric with contrasting olive green flap cargo pockets, drawstring waist and bungee toggle hems."
     },
     {
       "id": "hanul-07",
       "brandId": "hanul",
       "category": "bottom",
       "colors": [
-        "espresso brown",
-        "burnt sienna"
+        "dark brown"
       ],
       "description": "Baggy canvas trousers in espresso brown with burnt-sienna bartack details and deep cargo pockets. Cut roomy through the leg to stack nicely over hiker boots.",
       "fit": "oversized",
@@ -241,15 +243,15 @@
         "workwear",
         "utility"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Dark brown baggy wide-leg full-length cargo pants in washed cotton twill with a high pleated waist, exposed button fly, and large flap pockets on the thighs."
     },
     {
       "id": "hanul-08",
       "brandId": "hanul",
       "category": "bottom",
       "colors": [
-        "heather taupe",
-        "dusty rose"
+        "taupe"
       ],
       "description": "Barrel-leg sweatpants in heather taupe fleece with dusty-rose inner drawcords. The brushed fleece lining keeps you warm while the curved leg pairs with cropped knits.",
       "fit": "relaxed",
@@ -273,15 +275,15 @@
         "relaxed",
         "fleece"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Light taupe heathered-fleece barrel sweatpants with a relaxed tapered full-length jogger silhouette, elastic drawstring waist, side pockets, and ribbed ankle cuffs."
     },
     {
       "id": "hanul-09",
       "brandId": "hanul",
       "category": "bottom",
       "colors": [
-        "camel tan",
-        "forest green"
+        "tan"
       ],
       "description": "Tapered corduroy pants in camel tan with forest-green pocket lining peeking at the waist. A clean regular fit that works with hoodies and long coats alike.",
       "fit": "regular",
@@ -304,7 +306,8 @@
         "retro",
         "smart-casual"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Tan tapered corduroy pants with a slim ankle-length silhouette in soft fine-wale texture featuring belt loops, button fly, and slanted side pockets."
     },
     {
       "id": "hanul-10",
@@ -312,7 +315,7 @@
       "category": "outerwear",
       "colors": [
         "sage green",
-        "amber yellow"
+        "mustard yellow"
       ],
       "description": "Cropped boxy puffer in muted sage green with amber-yellow lining inside the collar. Throw it over rib knits and barrel pants for a warm sculptural silhouette.",
       "fit": "oversized",
@@ -336,15 +339,15 @@
         "cropped",
         "oversized"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Muted sage-green cropped oversized boxy puffer with puffy square-quilted texture, high stand collar revealing mustard-yellow interior lining, center front zip and elasticated cropped hem."
     },
     {
       "id": "hanul-11",
       "brandId": "hanul",
       "category": "outerwear",
       "colors": [
-        "warm oatmeal",
-        "cocoa brown"
+        "beige"
       ],
       "description": "Long double-breasted coat in warm oatmeal wool with cocoa-brown horn buttons. Its relaxed drape layers cleanly over hoodies and wide trousers for cold Seoul days.",
       "fit": "relaxed",
@@ -370,15 +373,15 @@
         "tailored",
         "elegant"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Light beige long below-knee double-breasted wool overcoat in a soft brushed texture with wide notch lapels, six-button closure and flap pockets."
     },
     {
       "id": "hanul-12",
       "brandId": "hanul",
       "category": "outerwear",
       "colors": [
-        "clay brown",
-        "terracotta"
+        "brown"
       ],
       "description": "Cropped quilted vest in clay brown with terracotta binding and big utility pockets. Layer it over hoodies and thermals for extra warmth without bulk.",
       "fit": "relaxed",
@@ -401,14 +404,15 @@
         "layered",
         "quilted"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Brown cropped sleeveless utility vest in diamond-quilted texture with stand collar, snap-button front, and four flap pockets with contrast trim."
     },
     {
       "id": "hanul-13",
       "brandId": "hanul",
       "category": "outerwear",
       "colors": [
-        "dark charcoal",
+        "black",
         "olive green"
       ],
       "description": "Extra-long down parka in dark charcoal matte nylon with olive-green interior and storm hood. Built for deep winter with room to fit chunky knits underneath.",
@@ -433,15 +437,15 @@
         "parka",
         "oversized"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Extra-long black quilted down puffer parka with an oversized below-the-knee silhouette, shiny padded texture, four large flap cargo pockets and a contrasting olive-green hood lining."
     },
     {
       "id": "hanul-14",
       "brandId": "hanul",
       "category": "outerwear",
       "colors": [
-        "cream ecru",
-        "moss brown"
+        "cream"
       ],
       "description": "Reversible sherpa fleece jacket with cream ecru sherpa on one side and moss-brown nylon on the other. Snap it over any cargo and sneaker combo for instant cozy texture.",
       "fit": "oversized",
@@ -467,15 +471,16 @@
         "reversible",
         "cozy"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Cream oversized hip-length sherpa teddy-fleece jacket with a fluffy texture, stand collar, front snap closure, and two large flap patch pockets with a small chest logo."
     },
     {
       "id": "hanul-15",
       "brandId": "hanul",
       "category": "shoes",
       "colors": [
-        "oat white",
-        "terracotta orange"
+        "off-white",
+        "burnt orange"
       ],
       "description": "Platform runner sneakers in oat white leather-mesh with terracotta-orange sole accents. The chunky sculpted sole adds height and pairs with cargos and sweatpants.",
       "fit": "regular",
@@ -497,7 +502,8 @@
         "platform",
         "retro"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Off-white low-top chunky runner sneakers with mixed smooth leather and breathable mesh texture, lace-up front, perforated detailing and an extra-thick sculpted white sole with burnt-orange stripe and rugged lug outsole."
     },
     {
       "id": "hanul-16",
@@ -505,7 +511,8 @@
       "category": "shoes",
       "colors": [
         "dark brown",
-        "mustard gold"
+        "tan",
+        "mustard yellow"
       ],
       "description": "Trail-inspired chunky sneakers in dark-brown suede-mesh with mustard-gold eyelets. Lugged gum soles grip winter streets while keeping the oversized street look.",
       "fit": "regular",
@@ -527,14 +534,16 @@
         "trail",
         "utility"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Dark brown low-top chunky trail sneakers in suede and mesh with mustard laces, thick wavy midsole and rugged gum lug sole with gold heel accent."
     },
     {
       "id": "hanul-17",
       "brandId": "hanul",
       "category": "shoes",
       "colors": [
-        "espresso black",
+        "black",
+        "cream",
         "olive green"
       ],
       "description": "Lugged hiker boots in espresso-black leather with olive-green lace hooks and shearling collar. Fully lined for snow days and made to anchor puffer and cargo outfits.",
@@ -557,15 +566,15 @@
         "winter",
         "utility"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Black smooth-leather lace-up winter hiker boots in ankle height with a cream shearling collar, olive lace hardware and a chunky black lugged sole with olive midsole stripe."
     },
     {
       "id": "hanul-18",
       "brandId": "hanul",
       "category": "accessory",
       "colors": [
-        "camel beige",
-        "brick red"
+        "beige"
       ],
       "description": "Extra-long fringed muffler in camel-beige lambswool with a brick-red edge stripe. Wrap it over wool coats and puffers for soft color and serious warmth.",
       "fit": "regular",
@@ -587,15 +596,15 @@
         "classic",
         "winter"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "A folded beige muffler scarf in soft fuzzy brushed wool with a compact rectangular silhouette, fringed ends and a thin red stripe accent near each end."
     },
     {
       "id": "hanul-19",
       "brandId": "hanul",
       "category": "accessory",
       "colors": [
-        "dark olive",
-        "mustard yellow"
+        "dark olive green"
       ],
       "description": "Fold-up ribbed beanie in dark-olive knit with a mustard-yellow embroidered logo. The thick double cuff locks in heat and tops off any puffer look.",
       "fit": "regular",
@@ -617,14 +626,15 @@
         "logo",
         "winter"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Dark olive green fold-up beanie in thick ribbed knit with a rounded crown and small gold HANUL embroidery centered on the cuff."
     },
     {
       "id": "hanul-20",
       "brandId": "hanul",
       "category": "accessory",
       "colors": [
-        "khaki tan",
+        "tan",
         "burnt orange"
       ],
       "description": "Compact ripstop crossbody tote in khaki tan with burnt-orange webbing straps and zip pockets. Sized to carry daily essentials while matching cargo and sneaker fits.",
@@ -647,7 +657,8 @@
         "minimal",
         "travel"
       ],
-      "warmth": 1
+      "warmth": 1,
+      "look": "Small tan square ripstop crossbody bag with crinkled texture, burnt-orange shoulder strap and front zip pocket with black logo label."
     },
     {
       "id": "lune-01",
@@ -678,7 +689,8 @@
         "crisp",
         "commuter"
       ],
-      "warmth": 2
+      "warmth": 2,
+      "look": "Ivory-white relaxed straight-fit hip-length shirt in smooth crisp poplin with a classic point collar, concealed button front, long sleeves with button cuffs, and a curved shirttail hem."
     },
     {
       "id": "lune-02",
@@ -712,14 +724,15 @@
         "minimalist",
         "layering"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Camel fine-knit crewneck sweater in a relaxed long-sleeve hip-length silhouette with a soft fuzzy halo texture, featuring ribbed crew neckline, cuffs, and hem."
     },
     {
       "id": "lune-03",
       "brandId": "lune",
       "category": "top",
       "colors": [
-        "navy"
+        "navy blue"
       ],
       "description": "A navy blouse in fluid crepe with soft front pleats and a band collar. Falls regular through the body for a polished tucked or untucked look.",
       "fit": "regular",
@@ -742,7 +755,8 @@
         "minimalist",
         "tailored"
       ],
-      "warmth": 2
+      "warmth": 2,
+      "look": "Navy blue long-sleeve blouse with a straight hip-length silhouette in smooth matte fabric featuring a band collar and fine vertical pintuck pleats framing the button-front placket with button cuffs."
     },
     {
       "id": "lune-04",
@@ -773,14 +787,15 @@
         "crisp",
         "commuter"
       ],
-      "warmth": 2
+      "warmth": 2,
+      "look": "Ivory long-sleeve classic button-down shirt in textured oxford weave with button-down collar, full button front, single chest pocket, button cuffs and curved shirttail hem."
     },
     {
       "id": "lune-05",
       "brandId": "lune",
       "category": "top",
       "colors": [
-        "charcoal"
+        "charcoal gray"
       ],
       "description": "A charcoal turtleneck in fine merino with a close ribbed collar. Slim and warm for wearing under overcoats or alone with flat-front trousers.",
       "fit": "slim",
@@ -804,7 +819,8 @@
         "warm",
         "tailored"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Charcoal gray slim-fit turtleneck sweater, hip-length in a fine smooth knit with long sleeves, ribbed cuffs and hem, and a tall folded turtleneck collar."
     },
     {
       "id": "lune-06",
@@ -836,7 +852,8 @@
         "minimalist",
         "commuter"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Black full-length slim-tapered pleated trousers in smooth suiting fabric with double front pleats, belt loops, side pockets, and sharp center creases."
     },
     {
       "id": "lune-07",
@@ -870,14 +887,15 @@
         "elegant",
         "versatile"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Camel A-line midi skirt in soft brushed wool-like texture with a high waist, fluid flare to mid-calf and visible side zip."
     },
     {
       "id": "lune-08",
       "brandId": "lune",
       "category": "bottom",
       "colors": [
-        "charcoal"
+        "charcoal gray"
       ],
       "description": "A charcoal pleated midi skirt with sharp knife pleats and a soft crepe hand. Sits at the waist and swishes just below the calf for winter layering.",
       "fit": "regular",
@@ -901,7 +919,8 @@
         "elegant",
         "minimalist"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Charcoal gray pleated midi skirt with a high flat waistband, A-line midi-length silhouette, and fine vertical accordion pleats in a smooth matte fabric."
     },
     {
       "id": "lune-09",
@@ -933,7 +952,8 @@
         "slim",
         "commuter"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Navy slim-tapered ankle-length flat-front trousers in smooth matte fabric with single button closure and slanted side pockets."
     },
     {
       "id": "lune-10",
@@ -967,7 +987,8 @@
         "timeless",
         "commuter"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Long camel tailored wrap coat in a soft brushed wool texture with wide notch lapels, a self-tie belt at the waist and two large front patch pockets."
     },
     {
       "id": "lune-11",
@@ -999,7 +1020,8 @@
         "minimalist",
         "warm"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Ivory double-breasted tailored long coat in smooth wool-like texture with peaked lapels, six dark buttons and front flap pockets."
     },
     {
       "id": "lune-12",
@@ -1030,7 +1052,8 @@
         "sleek",
         "commuter"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Black belted straight knee-length coat in smooth wool with a pointed shirt collar, self waist belt and two front flap pockets."
     },
     {
       "id": "lune-13",
@@ -1062,14 +1085,15 @@
         "classic",
         "commuter"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Navy tailored overcoat in a straight knee-length silhouette with smooth matte wool texture, featuring notched lapels, three-button single-breasted closure, flap hip pockets and a welt chest pocket."
     },
     {
       "id": "lune-14",
       "brandId": "lune",
       "category": "outerwear",
       "colors": [
-        "charcoal"
+        "charcoal gray"
       ],
       "description": "A relaxed charcoal coat in brushed wool with dropped shoulders. Minimalist single-breasted style with generous pockets for everyday winter commuting.",
       "fit": "relaxed",
@@ -1096,7 +1120,8 @@
         "minimalist",
         "warm"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Charcoal-gray single-breasted relaxed coat in a textured brushed finish with notched lapels, two-button front closure and large patch pockets, falling to just above the knee."
     },
     {
       "id": "lune-15",
@@ -1126,7 +1151,8 @@
         "commuter",
         "polished"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Black glossy polished-leather penny loafers with a low-cut slip-on silhouette, smooth shiny texture, almond toe, saddle strap across the vamp, and low stacked block heel."
     },
     {
       "id": "lune-16",
@@ -1156,14 +1182,16 @@
         "minimalist",
         "weather-ready"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Black ankle-length Chelsea boots in smooth matte leather with elastic side panels, rear pull tabs, rounded toes and chunky lugged soles."
     },
     {
       "id": "lune-17",
       "brandId": "lune",
       "category": "shoes",
       "colors": [
-        "charcoal"
+        "charcoal gray",
+        "black"
       ],
       "description": "Charcoal suede loafers with a soft unlined feel and гибк sole. Relaxed yet refined for office days and weekend walks alike.",
       "fit": "regular",
@@ -1186,7 +1214,8 @@
         "minimalist",
         "casual"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Charcoal-gray slip-on Venetian loafers in soft suede with a low-cut profile, moc-toe apron stitching around the vamp and a low black rubber sole."
     },
     {
       "id": "lune-18",
@@ -1216,7 +1245,8 @@
         "professional",
         "durable"
       ],
-      "warmth": 1
+      "warmth": 1,
+      "look": "Black rectangular structured briefcase in grained leather with rolled top handle, flap closure and dual vertical front straps with gold buckles."
     },
     {
       "id": "lune-19",
@@ -1246,7 +1276,8 @@
         "minimalist",
         "warm"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "A camel long folded rectangular scarf in a soft fluffy brushed wool texture with twisted fringe tassels at the ends."
     },
     {
       "id": "lune-20",
@@ -1276,15 +1307,15 @@
         "minimalist",
         "versatile"
       ],
-      "warmth": 1
+      "warmth": 1,
+      "look": "Black structured medium tote in pebbled leather with short rolled top handles and a clean rectangular silhouette."
     },
     {
       "id": "northline-01",
       "brandId": "northline",
       "category": "top",
       "colors": [
-        "glacier blue",
-        "black"
+        "light blue"
       ],
       "description": "High-loft grid fleece traps heat without bulk for cold trail mornings. Half-zip collar and thumbholes make it an easy midlayer for city and summit.",
       "fit": "regular",
@@ -1311,15 +1342,15 @@
         "outdoor",
         "layered"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Light blue relaxed-fit hip-length half-zip pullover in grid-textured fleece with long sleeves, stand collar, and a small circular logo on the left chest."
     },
     {
       "id": "northline-02",
       "brandId": "northline",
       "category": "top",
       "colors": [
-        "black",
-        "safety orange"
+        "black"
       ],
       "description": "Soft merino thermal top regulates temperature on winter hikes and ski tours. Flatlock seams and a crew neck keep it comfortable under midlayers all day.",
       "fit": "slim",
@@ -1343,14 +1374,15 @@
         "technical",
         "minimalist"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Black slim-fitted long-sleeve hip-length thermal top in ribbed waffle-knit texture with a crew neckline and contrasting orange flatlock seaming throughout."
     },
     {
       "id": "northline-03",
       "brandId": "northline",
       "category": "top",
       "colors": [
-        "forest green",
+        "green",
         "black"
       ],
       "description": "Brushed flannel shirt in a breathable merino blend for crisp autumn trails. Chest pockets and a relaxed placket wear well over a tee or under a shell.",
@@ -1376,7 +1408,8 @@
         "casual",
         "heritage"
       ],
-      "warmth": 2
+      "warmth": 2,
+      "look": "Green and black plaid long-sleeve flannel button-up shirt with a collared neckline, two flap chest pockets and a straight hip-length cut."
     },
     {
       "id": "northline-04",
@@ -1384,7 +1417,7 @@
       "category": "top",
       "colors": [
         "black",
-        "forest green"
+        "dark green"
       ],
       "description": "Heavyweight hoodie built for frosty mornings at camp and in the city. Double-layer hood and kangaroo pocket add warmth without restricting movement.",
       "fit": "relaxed",
@@ -1408,15 +1441,15 @@
         "outdoor",
         "cozy"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Black relaxed-fit heavyweight pullover hoodie, hip-length in soft matte fleece with a kangaroo pocket, drawstring hood with dark green lining, and ribbed cuffs and hem."
     },
     {
       "id": "northline-05",
       "brandId": "northline",
       "category": "top",
       "colors": [
-        "glacier blue",
-        "safety orange"
+        "light blue"
       ],
       "description": "Featherlight trail tee wicks sweat fast on summer hikes and training days. Athletic cut and flat seams keep it comfortable under a pack.",
       "fit": "regular",
@@ -1443,15 +1476,15 @@
         "technical",
         "athletic"
       ],
-      "warmth": 1
+      "warmth": 1,
+      "look": "Light blue short-sleeve crew-neck tee in a slim hip-length silhouette with smooth lightweight texture and small vertical orange branding at the lower side seam."
     },
     {
       "id": "northline-06",
       "brandId": "northline",
       "category": "bottom",
       "colors": [
-        "forest green",
-        "black"
+        "dark green"
       ],
       "description": "Stretch softshell pants block wind and light rain on exposed ridges. Articulated knees and five pockets make them ideal for hiking and commuting.",
       "fit": "slim",
@@ -1476,15 +1509,15 @@
         "outdoor",
         "water-resistant"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Dark green slim-tapered full-length softshell pants in smooth stretch fabric with articulated knees, diagonal zip hip pockets and ankle zips."
     },
     {
       "id": "northline-07",
       "brandId": "northline",
       "category": "bottom",
       "colors": [
-        "black",
-        "forest green"
+        "black"
       ],
       "description": "Rugged convertible pants zip off to shorts for changing mountain weather. Ripstop fabric and cargo pockets carry trail essentials with ease.",
       "fit": "regular",
@@ -1511,7 +1544,8 @@
         "outdoor",
         "versatile"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Black straight-leg full-length hiking cargo pants in lightweight matte fabric with flap cargo pockets and zip-off convertible legs at the knee."
     },
     {
       "id": "northline-08",
@@ -1519,7 +1553,7 @@
       "category": "bottom",
       "colors": [
         "black",
-        "safety orange"
+        "orange"
       ],
       "description": "Thermal leggings provide a warm base layer under shells on sub-zero days. Stretch merino knit moves with you on climbs and ski tours.",
       "fit": "slim",
@@ -1543,14 +1577,15 @@
         "technical",
         "thermal"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Black skin-tight full-length thermal leggings in a smooth stretch knit with a bright orange ribbed waistband, matching ankle cuffs and thin side stripes plus a small orange triangle logo on the left thigh."
     },
     {
       "id": "northline-09",
       "brandId": "northline",
       "category": "bottom",
       "colors": [
-        "forest green",
+        "dark green",
         "black"
       ],
       "description": "Soft brushed joggers are perfect for cool evenings and travel days. Elastic cuffs and a drawstring waist keep the fit relaxed and easy.",
@@ -1575,15 +1610,15 @@
         "cozy",
         "athleisure"
       ],
-      "warmth": 2
+      "warmth": 2,
+      "look": "Dark evergreen soft-fleece joggers with a relaxed tapered full-length silhouette, black ribbed drawstring waistband and black ankle cuffs, featuring a small orange logo on the upper thigh."
     },
     {
       "id": "northline-10",
       "brandId": "northline",
       "category": "outerwear",
       "colors": [
-        "glacier blue",
-        "black"
+        "dusty blue"
       ],
       "description": "Premium 800-fill down jacket delivers serious warmth for alpine winters. Packable design with a two-way zipper works from downtown to the backcountry.",
       "fit": "regular",
@@ -1608,15 +1643,15 @@
         "technical",
         "packable"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Dusty blue hip-length slim-fit down puffer jacket with glossy horizontal quilted baffling, tall stand collar and black full front zip with zippered hand pockets."
     },
     {
       "id": "northline-11",
       "brandId": "northline",
       "category": "outerwear",
       "colors": [
-        "forest green",
-        "black"
+        "forest green"
       ],
       "description": "Three-layer shell parka shields against heavy rain, snow and wind. Pit zips and a helmet-compatible hood make it ready for serious mountain weather.",
       "fit": "regular",
@@ -1643,7 +1678,8 @@
         "technical",
         "shell"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Forest-green relaxed mid-thigh parka in smooth matte shell with an attached drawcord hood, hidden front closure, and four snap-flap cargo pockets."
     },
     {
       "id": "northline-12",
@@ -1651,7 +1687,8 @@
       "category": "outerwear",
       "colors": [
         "black",
-        "safety orange"
+        "cream",
+        "orange"
       ],
       "description": "Long insulated trail coat keeps you warm through blizzards and city commutes. Synthetic fill stays warm when wet and the safety orange lining adds visibility.",
       "fit": "relaxed",
@@ -1678,15 +1715,15 @@
         "winter",
         "urban"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Long black below-knee quilted puffer parka with puffy horizontal channel quilting, faux-fur-trimmed hood and bright orange lining visible inside the hood and down the front opening with flap cargo pockets."
     },
     {
       "id": "northline-13",
       "brandId": "northline",
       "category": "outerwear",
       "colors": [
-        "forest green",
-        "safety orange"
+        "dark green"
       ],
       "description": "Fleece-backed softshell jacket balances warmth and breathability for active days. Stretch panels and a high collar protect against cold wind on the trail.",
       "fit": "slim",
@@ -1711,7 +1748,8 @@
         "technical",
         "windproof"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Dark forest-green fitted hip-length softshell jacket in smooth matte stretch fabric with a high fleece-lined stand collar and contrasting bright-orange full-front, chest, and side hand-pocket zips."
     },
     {
       "id": "northline-14",
@@ -1719,7 +1757,7 @@
       "category": "outerwear",
       "colors": [
         "black",
-        "glacier blue"
+        "light blue"
       ],
       "description": "Waterproof ski jacket with mapped insulation handles powder days and icy lifts. Powder skirt and lift-pass pocket add mountain-ready function.",
       "fit": "regular",
@@ -1744,15 +1782,16 @@
         "insulated",
         "ski"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Black straight-fit hip-length ski jacket in a matte waterproof shell with light blue side panels, a tall stand collar with cream fleece lining, and a chest lift-pass pocket with orange pulls."
     },
     {
       "id": "northline-15",
       "brandId": "northline",
       "category": "shoes",
       "colors": [
-        "black",
-        "forest green"
+        "dark green",
+        "black"
       ],
       "description": "Waterproof hiking boots grip slick rock and muddy city streets alike. Cushioned midsole and high ankle support keep you steady on long treks.",
       "fit": "regular",
@@ -1775,7 +1814,8 @@
         "technical",
         "durable"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Dark green suede mid-height hiking boot with black leather overlays, rugged black lug sole and bright orange laces with metal hooks."
     },
     {
       "id": "northline-16",
@@ -1783,7 +1823,7 @@
       "category": "shoes",
       "colors": [
         "black",
-        "glacier blue"
+        "blue"
       ],
       "description": "Insulated winter boots keep feet warm to well below freezing. Aggressive tread and sealed seams handle snow, slush and icy sidewalks.",
       "fit": "regular",
@@ -1806,15 +1846,17 @@
         "waterproof",
         "winter"
       ],
-      "warmth": 5
+      "warmth": 5,
+      "look": "Black and dusty-blue mid-calf insulated winter boot with quilted textile shaft, pebbled faux-leather foot, faux-fur collar trim, front lace-up with metal hooks, and chunky lugged sole."
     },
     {
       "id": "northline-17",
       "brandId": "northline",
       "category": "shoes",
       "colors": [
-        "forest green",
-        "black"
+        "dark green",
+        "black",
+        "orange"
       ],
       "description": "Tough leather trail boots break in fast and repel rain on any route. Vibram-style lugs and cushioned footbed support all-day mileage.",
       "fit": "regular",
@@ -1837,15 +1879,16 @@
         "durable",
         "outdoor"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Dark green mid-ankle hiking boots in pebbled leather with black rubber toe caps and lug soles and bright orange lace-up fronts."
     },
     {
       "id": "northline-18",
       "brandId": "northline",
       "category": "accessory",
       "colors": [
-        "forest green",
-        "safety orange"
+        "dark green",
+        "orange"
       ],
       "description": "Extra-long merino scarf wraps twice for full neck and face coverage. Soft double-knit wool stays warm even when damp.",
       "fit": "regular",
@@ -1868,7 +1911,8 @@
         "winter",
         "knit"
       ],
-      "warmth": 4
+      "warmth": 4,
+      "look": "Dark green chunky ribbed-knit rectangular scarf with bright orange striped ends finished with fringe."
     },
     {
       "id": "northline-19",
@@ -1876,7 +1920,7 @@
       "category": "accessory",
       "colors": [
         "black",
-        "safety orange"
+        "orange"
       ],
       "description": "Stretch knit gloves keep hands warm while letting you use your phone. Silicone grip and touchscreen fingertips work for driving and hiking poles.",
       "fit": "slim",
@@ -1899,14 +1943,15 @@
         "winter",
         "touchscreen"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Black wrist-length knit glove with ribbed texture, bright orange touchscreen fingertips and cuff, and silicone grip dots across the palm with a small orange logo on the finger."
     },
     {
       "id": "northline-20",
       "brandId": "northline",
       "category": "accessory",
       "colors": [
-        "safety orange",
+        "orange",
         "black"
       ],
       "description": "Fleece-lined beanie locks in heat on windy summits and night commutes. Ribbed knit and folded cuff ensure a snug, comfortable fit.",
@@ -1930,7 +1975,8 @@
         "winter",
         "knit"
       ],
-      "warmth": 3
+      "warmth": 3,
+      "look": "Vibrant orange chunky rib-knit beanie with thick textured weave, folded black cuff and black pom-pom on top."
     }
   ]
 }

@@ -28,6 +28,7 @@ export interface Product {
   styleTags: string[];
   occasions: string[];
   description: string;
+  look: string;
   imagePrompt: string;
   sizes: Size[];
 }

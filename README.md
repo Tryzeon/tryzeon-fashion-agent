@@ -9,5 +9,5 @@ Everything in this repository was written during the hackathon. It is a standalo
 ```bash
 cp .env.example .env.local   # fill in META_API_KEY
 npm install
-npm run dev                  # vercel dev: Vite frontend + api/ functions
+vercel dev                   # Vite frontend + api/ functions
 ```

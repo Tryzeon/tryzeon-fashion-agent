@@ -175,7 +175,7 @@ async function verify(personImage: string, tryonImage: string, products: Product
   const productParts = await Promise.all(
     products.map(async (p): Promise<OpenAI.Chat.ChatCompletionContentPart[]> => [
       { type: 'text', text: `Product ${p.id}: ${p.name} (${p.garment}; ${p.colors.join(', ')}; ${p.material})` },
-      { type: 'image_url', image_url: { url: await productImageDataUrl(p.id) } },
+      { type: 'image_url', image_url: { url: await productImageDataUrl(p.id, 'small') } },
     ]),
   );
   const completion = await meta().chat.completions.create({

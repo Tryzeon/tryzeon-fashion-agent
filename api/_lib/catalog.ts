@@ -15,7 +15,8 @@ export function brandName(product: Product): string {
   return catalog.brands.find((b) => b.id === product.brandId)?.name ?? product.brandId;
 }
 
-export async function productImageDataUrl(id: string): Promise<string> {
-  const bytes = await readFile(join(process.cwd(), 'public', 'catalog', `${id}.webp`));
+export async function productImageDataUrl(id: string, variant: 'full' | 'small' = 'full'): Promise<string> {
+  const dir = variant === 'small' ? ['catalog', 'small'] : ['catalog'];
+  const bytes = await readFile(join(process.cwd(), 'public', ...dir, `${id}.webp`));
   return `data:image/webp;base64,${bytes.toString('base64')}`;
 }

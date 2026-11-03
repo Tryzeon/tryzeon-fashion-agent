@@ -139,7 +139,7 @@ function tokens(text: string): string[] {
 }
 
 function searchableText(p: Product): string {
-  return [p.name, p.garment, p.description, p.material, ...p.colors, ...p.styleTags, ...p.occasions, brandName(p)].join(' ');
+  return [p.name, p.garment, p.look, p.description, p.material, ...p.colors, ...p.styleTags, ...p.occasions, brandName(p)].join(' ');
 }
 
 interface SearchArgs {
@@ -177,7 +177,7 @@ function productSummary(p: Product) {
     fit: p.fit,
     warmth: p.warmth,
     style: p.styleTags,
-    description: p.description,
+    look: p.look,
   };
 }
 
