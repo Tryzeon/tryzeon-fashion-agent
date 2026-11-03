@@ -304,7 +304,7 @@ export async function POST(request: Request): Promise<Response> {
       const message = completion.choices[0]?.message;
       if (!message) throw new Error('Muse Spark returned no message');
       const calls = message.tool_calls ?? [];
-      const text = message.content?.trim();
+      const text = message.content?.replace(/([.!?])(?=[A-Z])/g, '$1 ').trim();
       if (!calls.length) {
         if (text) send({ type: 'message', text });
         send({ type: 'done' });

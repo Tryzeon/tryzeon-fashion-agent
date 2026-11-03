@@ -1,0 +1,332 @@
+{
+  "summary": {
+    "date": "2026-11-03T08:24:52.082Z",
+    "agent": {
+      "cases": 10,
+      "validOutfit": "100%",
+      "fitsBody": "100%",
+      "constraintsMet": "100%",
+      "proposalsRejectedByValidator": 0,
+      "medianToolCalls": 7,
+      "medianSeconds": 16.309
+    },
+    "tryon": {
+      "cases": 10,
+      "passOnFirstRender": "60%",
+      "passAfterSelfCheck": "100%",
+      "medianAttempts": 1,
+      "medianFirstImageSeconds": 29.2725,
+      "medianTotalSeconds": 43.663
+    }
+  },
+  "agentResults": [
+    {
+      "text": "Seoul next week, around 0°C. Cozy street style.",
+      "shopper": "mina",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 6,
+      "seconds": 15.152,
+      "items": [
+        "hanul-01",
+        "hanul-08",
+        "hanul-10",
+        "hanul-17"
+      ]
+    },
+    {
+      "text": "Client dinner in Taipei, rainy 14°C. Smart and minimal.",
+      "shopper": "mina",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 8,
+      "seconds": 21.341,
+      "items": [
+        "lune-03",
+        "lune-06",
+        "hanul-11",
+        "lune-15",
+        "lune-20"
+      ]
+    },
+    {
+      "text": "Weekend hike then coffee. Practical but cute.",
+      "shopper": "mina",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 7,
+      "seconds": 13.959,
+      "items": [
+        "northline-05",
+        "northline-06",
+        "northline-13",
+        "northline-15"
+      ]
+    },
+    {
+      "text": "Office outfit only from Atelier Lune, please.",
+      "shopper": "mina",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 6,
+      "seconds": 11.117,
+      "items": [
+        "lune-01",
+        "lune-06",
+        "lune-15",
+        "lune-20"
+      ]
+    },
+    {
+      "text": "Full winter outfit under $600 total.",
+      "shopper": "mina",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 7,
+      "seconds": 16.367,
+      "items": [
+        "hanul-05",
+        "hanul-08",
+        "hanul-14",
+        "northline-16"
+      ]
+    },
+    {
+      "text": "Ski trip in Hokkaido, -5°C. Keep me warm.",
+      "shopper": "leo",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 9,
+      "seconds": 18.969,
+      "items": [
+        "lune-05",
+        "northline-07",
+        "northline-14",
+        "hanul-17",
+        "hanul-19"
+      ]
+    },
+    {
+      "text": "Smart casual for a gallery opening in December.",
+      "shopper": "leo",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 7,
+      "seconds": 18.182,
+      "items": [
+        "lune-04",
+        "lune-09",
+        "lune-13",
+        "lune-16"
+      ]
+    },
+    {
+      "text": "Streetwear look for Hongdae on a cold night.",
+      "shopper": "leo",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 8,
+      "seconds": 17.684,
+      "items": [
+        "hanul-04",
+        "hanul-07",
+        "hanul-13",
+        "hanul-16",
+        "hanul-19"
+      ]
+    },
+    {
+      "text": "I want a wool overcoat look for work. Build around a navy coat.",
+      "shopper": "leo",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 6,
+      "seconds": 16.251,
+      "items": [
+        "lune-04",
+        "lune-09",
+        "lune-13",
+        "lune-16"
+      ]
+    },
+    {
+      "text": "Outfit with a beanie and boots for snowy weather.",
+      "shopper": "leo",
+      "outfit": true,
+      "fitsBody": true,
+      "constraintsMet": true,
+      "rejections": 0,
+      "toolCalls": 7,
+      "seconds": 15.321,
+      "items": [
+        "hanul-07",
+        "hanul-13",
+        "hanul-17",
+        "hanul-19"
+      ]
+    }
+  ],
+  "tryonResults": [
+    {
+      "shopper": "mina",
+      "productIds": [
+        "hanul-01",
+        "hanul-08",
+        "hanul-10",
+        "hanul-17"
+      ],
+      "firstPass": true,
+      "finalPass": true,
+      "attempts": 1,
+      "firstImageSeconds": 17.851,
+      "totalSeconds": 23.751
+    },
+    {
+      "shopper": "mina",
+      "productIds": [
+        "lune-03",
+        "lune-06",
+        "hanul-11",
+        "lune-15",
+        "lune-20"
+      ],
+      "firstPass": false,
+      "finalPass": true,
+      "attempts": 2,
+      "firstImageSeconds": 30.601,
+      "totalSeconds": 67.115
+    },
+    {
+      "shopper": "mina",
+      "productIds": [
+        "northline-05",
+        "northline-06",
+        "northline-13",
+        "northline-15"
+      ],
+      "firstPass": true,
+      "finalPass": true,
+      "attempts": 1,
+      "firstImageSeconds": 16.153,
+      "totalSeconds": 24.678
+    },
+    {
+      "shopper": "mina",
+      "productIds": [
+        "lune-01",
+        "lune-06",
+        "lune-15",
+        "lune-20"
+      ],
+      "firstPass": true,
+      "finalPass": true,
+      "attempts": 1,
+      "firstImageSeconds": 19.62,
+      "totalSeconds": 26.823
+    },
+    {
+      "shopper": "mina",
+      "productIds": [
+        "hanul-05",
+        "hanul-08",
+        "hanul-14",
+        "northline-16"
+      ],
+      "firstPass": false,
+      "finalPass": true,
+      "attempts": 2,
+      "firstImageSeconds": 16.983,
+      "totalSeconds": 51.367
+    },
+    {
+      "shopper": "leo",
+      "productIds": [
+        "lune-05",
+        "northline-07",
+        "northline-14",
+        "hanul-17",
+        "hanul-19"
+      ],
+      "firstPass": true,
+      "finalPass": true,
+      "attempts": 1,
+      "firstImageSeconds": 36.139,
+      "totalSeconds": 42.455
+    },
+    {
+      "shopper": "leo",
+      "productIds": [
+        "lune-04",
+        "lune-09",
+        "lune-13",
+        "lune-16"
+      ],
+      "firstPass": true,
+      "finalPass": true,
+      "attempts": 1,
+      "firstImageSeconds": 27.944,
+      "totalSeconds": 39.481
+    },
+    {
+      "shopper": "leo",
+      "productIds": [
+        "hanul-04",
+        "hanul-07",
+        "hanul-13",
+        "hanul-16",
+        "hanul-19"
+      ],
+      "firstPass": false,
+      "finalPass": true,
+      "attempts": 3,
+      "firstImageSeconds": 35.342,
+      "totalSeconds": 96.249
+    },
+    {
+      "shopper": "leo",
+      "productIds": [
+        "lune-04",
+        "lune-09",
+        "lune-13",
+        "lune-16"
+      ],
+      "firstPass": true,
+      "finalPass": true,
+      "attempts": 1,
+      "firstImageSeconds": 36.532,
+      "totalSeconds": 44.871
+    },
+    {
+      "shopper": "leo",
+      "productIds": [
+        "hanul-07",
+        "hanul-13",
+        "hanul-17",
+        "hanul-19"
+      ],
+      "firstPass": false,
+      "finalPass": true,
+      "attempts": 2,
+      "firstImageSeconds": 32.051,
+      "totalSeconds": 74.682
+    }
+  ]
+}
